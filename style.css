@@ -1,0 +1,197 @@
+:root{
+
+
+  --color-primary-400: hsl(185, 75%, 39%);
+  --color-primary-700:hsl(227, 10%, 46%);
+  --color-primary-900: hsl(229, 23%, 23%);
+
+  --color-neutral-300: hsl(0, 0%, 59%) ;
+
+
+  --fs-base: 1.125rem;
+
+  --fw-base: 400;
+  --fw-accent: 700;
+
+  --ff-base: 'Kumbh Sans', sans-serif;
+}
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('images/bg-pattern-bottom.svg'), url('images/bg-pattern-top.svg');
+  background-repeat: no-repeat;
+  background-position: top 40vh left 50vw, bottom 40vh right 50vw;
+  font-family: var(--ff-base);
+  background-color: var(--color-primary-400);
+  text-align: center;
+}
+
+
+
+
+.card{
+  border-radius: 1rem;
+  background-color: white;
+  overflow: hidden;
+  margin: auto;
+  
+}
+
+.card__content{
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 600px){
+  .card__content{
+    margin-top: 2rem;
+  }
+}
+
+.card__img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__img picture img{
+  border-radius: 50%;
+  border: 0.3rem solid #fff;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}
+
+@media screen and (min-width: 600px) {
+  .card__img picture img{
+    top: 35%;
+    left: 46.3%;
+  }
+}
+
+.card__pattern{
+  display: grid;
+}
+
+
+.card__content{
+  padding: 2rem;
+}
+
+
+.card__group{
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.card__name{
+  font-size: var(--fs-base);
+}
+
+.card__age{
+  align-self: center;
+  color: var(--color-primary-700);
+}
+
+.card__city{
+  color: var(--color-primary-700);
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+
+.card__divider{
+  height: 1px;
+  width: 100%;
+  background: var(--color-neutral-300);
+  margin-bottom: 1.5rem;
+}
+
+.flex-group{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 1rem;
+}
+
+.flex-group > *{
+  display: grid;
+  gap: 0.1rem;
+  grid-auto-flow: row;
+}
+
+.card__numbers{
+  font-weight: var(--fw-accent);
+}
+
+.card__metrics{
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--color-primary-700);
+  font-weight: var(--fw-base);
+}
